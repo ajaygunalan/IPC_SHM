@@ -36,7 +36,14 @@ int main()
 		exit(1);
 	}			
 
-
+int while_loop = 0;
+while(1)
+{
+	/** Loop value of wile **/
+	while_loop = while_loop +1;
+	printf("==========Loop value of while loop is %d:===========",  while_loop);
+	
+	
 	/** Get the encoder value as a unsigned integer **/
 	encoder_value[0] = 0;
 	encoder_value[1] = 11;
@@ -49,53 +56,53 @@ int main()
 
 	/** Convert Unsigned Integer into str  **/
 
-	printf("\n encoder_value0 is %d", encoder_value[0]);
+	//~ printf("\n encoder_value0 is %d", encoder_value[0]);
 	sprintf(temp0,"%04d", encoder_value[0]);	
 	dummy[0].encoder_value_str = temp0;
-	printf("\n value of temp0 is %s", temp0);
-	printf("\n encoder_value_in_str0 is %s \n", dummy[0].encoder_value_str);
+	//~ printf("\n value of temp0 is %s", temp0);
+	//~ printf("\n encoder_value_in_str0 is %s \n", dummy[0].encoder_value_str);
 
-	printf("\n encoder_value1 is %d", encoder_value[1]);
+	//printf("\n encoder_value1 is %d", encoder_value[1]);
 	sprintf(temp1,"%04d", encoder_value[1]);	
 	dummy[1].encoder_value_str = temp1;
-	printf("\n value of temp1 is %s", temp1);
-	printf("\n encoder_value_in_str1 is %s \n", dummy[1].encoder_value_str);
+	//~ printf("\n value of temp1 is %s", temp1);
+	//~ printf("\n encoder_value_in_str1 is %s \n", dummy[1].encoder_value_str);
 
-	printf("\n encoder_value2 is %d", encoder_value[2]);
+	//~ printf("\n encoder_value2 is %d", encoder_value[2]);
 	sprintf(temp2,"%04d", encoder_value[2]);	
 	dummy[2].encoder_value_str = temp2;
-	printf("\n value of temp2 is %s", temp2);
-	printf("\n encoder_value_in_str2 is %s \n", dummy[2].encoder_value_str);
+	//~ printf("\n value of temp2 is %s", temp2);
+	//~ printf("\n encoder_value_in_str2 is %s \n", dummy[2].encoder_value_str);
 
-	printf("\n encoder_value3 is %d", encoder_value[3]);
+	//~ printf("\n encoder_value3 is %d", encoder_value[3]);
 	sprintf(temp3,"%04d", encoder_value[3]);	
 	dummy[3].encoder_value_str = temp3;
-	printf("\n value of temp3 is %s", temp3);
-	printf("\n encoder_value_in_str3 is %s \n", dummy[3].encoder_value_str);
+	//~ printf("\n value of temp3 is %s", temp3);
+	//~ printf("\n encoder_value_in_str3 is %s \n", dummy[3].encoder_value_str);
 
-	printf("\n encoder_value4 is %d", encoder_value[4]);
+	//~ printf("\n encoder_value4 is %d", encoder_value[4]);
 	sprintf(temp4,"%04d", encoder_value[4]);	
 	dummy[4].encoder_value_str = temp4;
-	printf("\n value of temp4 is %s", temp4);
-	printf("\n encoder_value_in_str4 is %s \n", dummy[4].encoder_value_str);
+	//~ printf("\n value of temp4 is %s", temp4);
+	//~ printf("\n encoder_value_in_str4 is %s \n", dummy[4].encoder_value_str);
 
-	printf("\n encoder_value5 is %d", encoder_value[5]);
+	//~ printf("\n encoder_value5 is %d", encoder_value[5]);
 	sprintf(temp5,"%04d", encoder_value[5]);	
 	dummy[5].encoder_value_str = temp5;
-	printf("\n value of temp5 is %s", temp5);
-	printf("\n encoder_value_in_str5 is %s \n", dummy[5].encoder_value_str);
+	//~ printf("\n value of temp5 is %s", temp5);
+	//~ printf("\n encoder_value_in_str5 is %s \n", dummy[5].encoder_value_str);
 
-	printf("\n encoder_value6 is %d", encoder_value[6]);
+	//~ printf("\n encoder_value6 is %d", encoder_value[6]);
 	sprintf(temp6,"%04d", encoder_value[6]);	
 	dummy[6].encoder_value_str = temp6;
-	printf("\n value of temp6 is %s", temp6);
-	printf("\n encoder_value_in_str6 is %s \n", dummy[6].encoder_value_str);
+	//~ printf("\n value of temp6 is %s", temp6);
+	//~ printf("\n encoder_value_in_str6 is %s \n", dummy[6].encoder_value_str);
 
-	printf("\n encoder_value7 is %d", encoder_value[7]);
+	//~ printf("\n encoder_value7 is %d", encoder_value[7]);
 	sprintf(temp7,"%04d", encoder_value[7]);	
 	dummy[7].encoder_value_str = temp7;
-	printf("\n value of temp7 is %s", temp7);
-	printf("\n encoder_value_in_str7 is %s \n", dummy[7].encoder_value_str);
+	//~ printf("\n value of temp7 is %s", temp7);
+	//~ printf("\n encoder_value_in_str7 is %s \n", dummy[7].encoder_value_str);
 
 
 	/** Write in the Shared Memory **/
@@ -115,6 +122,8 @@ int main()
 	}
 
 	printf("\n I have written in the shared memeory \n");
+    sleep(0.0001);	
+}
 
 	/** Sleep so there is enough time for the reader**/
 	sleep(10);
