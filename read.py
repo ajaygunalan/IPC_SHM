@@ -25,6 +25,6 @@ while(1):
 	print "\n Loop value i is: \n"
 	print i
 	print "\n"
-	sleep(0.0001);	
+	#sleep(0.0001)
 
 	
